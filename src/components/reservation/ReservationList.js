@@ -15,13 +15,18 @@ const ReservationList = () => {
     }, []);
   
     return (
-      <div>
+      <div className="container mx-auto my-3 py-3 rounded-4 shadow" style={styles.form} >
         {reservations.map((reservation) => (
           <ReservationItems key={reservation.rsvtSeq} reservation={reservation}/>
         ))}
       </div>
     );
   };
-  
+
+  const styles = {
+    form : {
+        marginTop: "100px",
+    },
+  }
   export default ReservationList;
 

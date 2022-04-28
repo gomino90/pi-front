@@ -43,7 +43,8 @@ const ReservationItems = (props) => {
 
 
     return (
-        <div className="container mx-auto my-3 py-3 rounded-4 shadow" style={{textAlign: "center", marginTop: "20px"}} >
+        
+        <div className="container mx-auto my-1 py-3 shadow" style={{textAlign: "center"}} >
             <Table striped bordered hover variant="dark" style={{textAlign: "center", margin: "0px", padding: "0px"}}>
             <tbody className="container">
                 <tr>
