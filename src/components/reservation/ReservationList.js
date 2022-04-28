@@ -22,6 +22,11 @@ const ReservationList = () => {
       </div>
     );
   };
-  
+
+  const styles = {
+    form : {
+        marginTop: "100px",
+    },
+  }
   export default ReservationList;
 
