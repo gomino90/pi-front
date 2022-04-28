@@ -24,9 +24,9 @@ class PostList extends Component {
             )
         )
         return (
-            <div className='shadow' style = {styles.container}>
-                <h2 style = {styles.title}>공지사항</h2>
-                <div style= {styles.header}>
+            <div className="container mx-auto my-3 py-3 rounded-4 shadow" style = {styles.container}>
+                <h2 className='' style = {styles.title}>공지사항</h2>
+                <div className='' style= {styles.header}>
                     <p>일련번호</p>
                     <p>제목</p>
                     <p>작성자</p>
@@ -54,10 +54,10 @@ const styles = {
         marginLeft: '310px',
         textAlign: 'center',
         width: '68%',
-        borderBottom: '1px solid lightgray',
+        // borderBottom: '1px solid lightgray',
     },
     title: {
-        marginTop: '120px',
+        marginTop: '90px',
         marginBottom: '40px',
         color: '#212529'
     },

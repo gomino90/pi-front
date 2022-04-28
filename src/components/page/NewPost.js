@@ -35,7 +35,7 @@ const NewPost = () => {
     }
     
     return (
-        <div className='shadow' style={styles.form} encType="multipart/form-data">
+        <div className="container mx-auto my-3 py-3 rounded-4 shadow" style={styles.form} encType="multipart/form-data">
 
             
             <div style={styles.container}>
@@ -63,17 +63,17 @@ const NewPost = () => {
 }
 
 const styles = {
-    form : {
-        padding: '41px',
-        position: 'absolute',
-        marginLeft: '335px',
-        width: '65%',
-        marginTop: '10%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        borderRadius: '30px',
-    },
+    // form : {
+    //     padding: '41px',
+    //     position: 'absolute',
+    //     marginLeft: '335px',
+    //     width: '65%',
+    //     marginTop: '10%',
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     alignItems: 'center',
+    //     borderRadius: '30px',
+    // },
     container: {
         display: 'flex',
         width: '60%',
