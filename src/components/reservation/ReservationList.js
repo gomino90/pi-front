@@ -15,7 +15,7 @@ const ReservationList = () => {
     }, []);
   
     return (
-      <div>
+      <div className="container mx-auto" style={{textAlign: "center", paddingTop: "100px"}}>
         {reservations.map((reservation) => (
           <ReservationItems key={reservation.rsvtSeq} reservation={reservation}/>
         ))}
