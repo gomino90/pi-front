@@ -60,28 +60,29 @@ const ReservationItems = (props) => {
                 <td>{rsvtMdfcnDt}</td>
                 <td>{operHr}</td>
                 <td>{stat}</td>
-                    {
-                        user.userId === {userId} ? (
+                    {   
+                        user ? (
+                            user.userId === {userId} ? (
                                 <td>
                                     <Button type="button" onClick={deleteReservation} className="btn btn-primary" variant="primary">예약취소</Button>
                                 </td>
-                        ):(
+                            ):
+                            user.role === "Admin" ? (
+                                <>
+                                    <td>
+                                        <Button type="button" onClick={approvalReservation} className="btn btn-primary" variant="primary">예약승인</Button>
+                                    </td>
+                                    <td>
+                                        <Button type="button" onClick={noapprovalReservation} className="btn btn-primary" variant="primary">예약거절</Button>
+                                    </td>
+                                </>
+                            ):(
+                                <>
+                                </>
+                            )
+                        ) :
+                        (
                             <></>
-                        )
-                    }
-                    {
-                        user.role === "Admin" ? (
-                            <>
-                                <td>
-                                    <Button type="button" onClick={approvalReservation} className="btn btn-primary" variant="primary">예약승인</Button>
-                                </td>
-                                <td>
-                                    <Button type="button" onClick={noapprovalReservation} className="btn btn-primary" variant="primary">예약거절</Button>
-                                </td>
-                            </>
-                        ):(
-                            <>
-                            </>
                         )
                     }
                 </tr>
