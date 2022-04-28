@@ -15,7 +15,7 @@ const ReservationList = () => {
     }, []);
   
     return (
-      <div className="container mx-auto my-3 py-3 rounded-4 shadow" style={styles.form} >
+      <div className="container mx-auto" style={{textAlign: "center", paddingTop: "100px"}}>
         {reservations.map((reservation) => (
           <ReservationItems key={reservation.rsvtSeq} reservation={reservation}/>
         ))}
