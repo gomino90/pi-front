@@ -8,11 +8,10 @@ import { RESERVATIONBACKEND, FACITDETAIL } from "../../_actions/types";
 
 const { kakao } = window;
 
-const MapContainer = ({ searchPlace, faci, pharmacy, parking, faciSearch, faciSearchBool}) => {
+function MapContainer({ searchPlace, faci, pharmacy, parking, faciSearch, faciSearchBool}){
 
   const [Places, setPlaces] = useState([]);
   const [facit, setFacit] = useState([]);
-  let itda = false;
   let dataorder = "";
 
   useEffect(() => {
@@ -24,11 +23,9 @@ const MapContainer = ({ searchPlace, faci, pharmacy, parking, faciSearch, faciSe
 
     // 마커를 클릭했을 때 해당 장소의 상세정보를 보여줄 커스텀오버레이입니다
     let placeOverlay = new kakao.maps.CustomOverlay({ zIndex: 1 }),
-      contentNode = document.createElement("div"), // 커스텀 오버레이의 컨텐츠 엘리먼트 입니다
-      currCategory = ""; // 현재 선택된 카테고리를 가지고 있을 변수입니다
+      contentNode = document.createElement("div") // 커스텀 오버레이의 컨텐츠 엘리먼트 입니다
     let facimarkers = [], markers = [];
     let searchedFacit = [];
-    let facimarker;
     let marker;
     let overlays = [];
 
@@ -37,8 +34,8 @@ const MapContainer = ({ searchPlace, faci, pharmacy, parking, faciSearch, faciSe
       center: new kakao.maps.LatLng(35.17973316713768, 129.07505674557024),
       level: 4,
     };
+    let map = new kakao.maps.Map(container, options);
 
-    const map = new kakao.maps.Map(container, options);
     // 장소 검색 객체를 생성합니다
     const pss = new kakao.maps.services.Places(map);
 
@@ -94,7 +91,7 @@ const MapContainer = ({ searchPlace, faci, pharmacy, parking, faciSearch, faciSe
 
       // 지도에 표시되고 있는 마커를 제거합니다
       removeMarker();
-
+      
       if(pharmacy === true){
         pss.categorySearch('PM9', placesSearchCB, { useMapBounds: true });
       }
@@ -220,6 +217,7 @@ const MapContainer = ({ searchPlace, faci, pharmacy, parking, faciSearch, faciSe
 
     //시설마커표시
     function displayFaciMarker(list){
+
       for (let i = 0; i < list.length; i++) {
         var content = 
         '<div class="overlaybox">' +
@@ -314,7 +312,6 @@ const MapContainer = ({ searchPlace, faci, pharmacy, parking, faciSearch, faciSe
         }
       };
     }
-
   }, [searchPlace, faci, pharmacy, parking, faciSearch, faciSearchBool]);
 
   return (

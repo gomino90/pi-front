@@ -47,9 +47,6 @@ function FacitItem(props) {
                 <td>{nationYn}</td>
                 <td>{updated}</td>
                 <td>{stat}</td>
-                <td><Link to={`${RESERVATIONBACKEND}/tbfacit/edit/` + fcSeq} className="btn btn-primary" variant="primary">수정</Link></td>
-                <td>
-                    <Button type="button" onClick={deleteFacit} className="btn btn-primary" variant="primary">삭제</Button></td>
                 </tr>
             </tbody>
             </Table>

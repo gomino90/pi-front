@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../_reducers';
 import { BOARDBACKEND } from '../../_actions/types';
+import HorizonLine from '../utility/HorizonLine';
 
 const PostDetail = () => {
     const {pstgSeq} = useParams();
@@ -87,15 +88,14 @@ const PostDetail = () => {
             </div>
 
             <div style={styles.container}>
-                <label style={styles.label}>이름:</label>
+                <label style={styles.label}>작성자:</label>
                 {
                     isEdit === false ? <div style={styles.pstg_cn}>{pstgPblrName}</div>
-                    : <input style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 "  onChange={(e) => setPstgTitle(e.target.value)} value={pstgPblrName}></input>
+                    : <input style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 "  onChange={(e) => setPstgTitle(e.target.value)} value={pstgPblrName} disabled></input>
                 }
             </div>
-
-            <div style={styles.container}>
-                 <label style={styles.label}>내용:</label>  
+            <HorizonLine />
+            <div>
             {
                 isEdit === false ? <div style={styles.pstg_cn}>{pstgCn}</div>
                 :  <textarea style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 " rows="5" onChange={(e) => setPstgCn(e.target.value)} value={pstgCn}></textarea>
