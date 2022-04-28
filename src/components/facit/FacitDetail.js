@@ -235,7 +235,7 @@ const styles = {
     color: '#FFFFFF',
     background: '#007FFF',
     borderRadius: '10px',
-    bottom: '20%',   
+    bottom: '15%',   
     textDecoration: 'none'
   },
 
@@ -252,7 +252,7 @@ const styles = {
     color: '#FFFFFF',
     background: '#007FFF',
     borderRadius: '10px',
-    bottom: '20%',   
+    bottom: '15%',   
     textDecoration: 'none'
   },
 
