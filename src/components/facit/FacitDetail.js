@@ -60,7 +60,13 @@ function FacitDetail() {
   return ( 
   <div>
     <div style={styles.div} className='div container'>
+      <div className="container ">
         <div >
+        <div style={styles.BBk}>
+        <DatePicker  name="rsvtYmd" selected={startDate} onChange={date => setStartDate(date)} minDate={addDays(new Date(), 1)} 
+            maxDate={addDays(new Date(), 14)} locale={ko} disabledKeyboardNavigation inline showOtherMonths="false"/>
+        {/* <FacitDetailDatePicker className=" mx-auto my-3 py-3 rounded-4 "/> */}
+        </div>
           <Card border="dark" style={styles.form}>
             <Card.Header>체육시설</Card.Header>
             <Card.Body>
@@ -75,11 +81,6 @@ function FacitDetail() {
           </Card>
         </div>
         <br />
-        <div style={styles.BBk}>
-        <DatePicker  name="rsvtYmd" selected={startDate} onChange={date => setStartDate(date)} minDate={addDays(new Date(), 1)} 
-            maxDate={addDays(new Date(), 14)} locale={ko} disabledKeyboardNavigation inline showOtherMonths="false"/>
-        {/* <FacitDetailDatePicker className=" mx-auto my-3 py-3 rounded-4 "/> */}
-        </div>
         {user ?(
           <>
             <Link to={"/reservation/" + fcSeq} style={styles.Pick} variant="primary">예약하기</Link>
@@ -92,6 +93,7 @@ function FacitDetail() {
           )
         }
         <Link to={"/reservationList/" + fcSeq} style={styles.Pickm} variant="primary">예약현황</Link>
+      </div>
     </div>
     <TabsUnstyled className="container mx-auto my-3 py-3 rounded-4 shadow" defaultValue={2}>
       <TabsList>

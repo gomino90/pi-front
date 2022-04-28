@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ReservationItems from "./ReservationItems";
 import {useParams} from "react-router-dom";
 import { RESERVATIONBACKEND } from "../../_actions/types";
+import axios from "axios";
 
 
 const ReservationListByFcSeq = () => {
@@ -9,7 +10,7 @@ const ReservationListByFcSeq = () => {
     const fcSeq = useParams().fcSeq;
   
     useEffect(() => {
-      fetch(`${RESERVATIONBACKEND}/reservation/getAll/${fcSeq}`)
+      axios.get(`${RESERVATIONBACKEND}/reservation/getAll/${fcSeq}`)
         .then((res) => res.json())
         .then((res) => {
           setReservations(res);
