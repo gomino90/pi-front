@@ -77,7 +77,7 @@ const PostDetail = () => {
   
 
     return (
-        <div  style={styles.form} className='shadow'>
+        <div  style={styles.form} className="container mx-auto my-6 py-5 rounded-4 shadow">
             <div style={styles.container}>
                 <label style={styles.label}>제목:</label>
                 {
@@ -141,14 +141,12 @@ const PostDetail = () => {
 const styles = {
     form : {
         padding: '41px',
-        position: 'absolute',
-        marginLeft: '335px',
         width: '65%',
-        marginTop: '10%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         borderRadius: '30px',
+        marginTop: '100px',
     },
     container: {
         display: 'flex',
