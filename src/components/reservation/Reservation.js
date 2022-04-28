@@ -147,7 +147,7 @@ const Reservation = () => {
 const styles = {
   form : {
     position: 'absolute',
-    marginTop: '200px',
+    marginTop: '100px',
     marginLeft: '850px',
     display: 'flex',
     flexDirection: 'column',
@@ -208,7 +208,7 @@ const styles = {
     
     padding: '2em', /* 여백으로 높이설정 */
     right: '45%',
-    bottom: '20%',
+    bottom: '15%',
     position: 'absolute',
 
   },

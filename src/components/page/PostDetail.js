@@ -98,7 +98,7 @@ const PostDetail = () => {
             <div>
             {
                 isEdit === false ? <div style={styles.pstg_cn}>{pstgCn}</div>
-                :  <textarea style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 " rows="5" onChange={(e) => setPstgCn(e.target.value)} value={pstgCn}></textarea>
+                :  <textarea style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 " rows="9" onChange={(e) => setPstgCn(e.target.value)} value={pstgCn}></textarea>
             }
             </div>
            

@@ -235,7 +235,7 @@ const styles = {
     color: '#FFFFFF',
     background: '#007FFF',
     borderRadius: '10px',
-    bottom: '28%',   
+    bottom: '20%',   
     textDecoration: 'none'
   },
 
@@ -252,14 +252,14 @@ const styles = {
     color: '#FFFFFF',
     background: '#007FFF',
     borderRadius: '10px',
-    bottom: '28%',   
+    bottom: '20%',   
     textDecoration: 'none'
   },
 
   BBk : { //달력
     padding: '4em', /* 여백으로 높이설정 */
     right: '48%',
-    bottom: '20%',
+    bottom: '10%',
     position: 'absolute',
   },
 }
