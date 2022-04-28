@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../_reducers';
 import { BOARDBACKEND } from '../../_actions/types';
@@ -90,7 +90,7 @@ const PostDetail = () => {
                 <label style={styles.label}>이름:</label>
                 {
                     isEdit === false ? <div style={styles.pstg_cn}>{pstgPblrName}</div>
-                    : <input style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 "  onChange={(e) => setPstgTitle(e.target.value)} value={pstgPblrName}></input>
+                    : <input style={styles.pstg_cn} className="form-control mx-auto my-3 py-3 rounded-4 "  onChange={(e) => setPstgTitle(e.target.value)} value={pstgPblrName} disabled></input>
                 }
             </div>
 
