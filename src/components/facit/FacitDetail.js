@@ -8,7 +8,6 @@ import TabUnstyled, { tabUnstyledClasses } from '@mui/base/TabUnstyled';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import FacitDetailDatePicker from "../holyday/FacitDetailDatePicker";
 import UseIsMount from "../UseIsMount";
 import FacitMap2 from './FacitMap2';
 import Comment from '../comment/Comment';
