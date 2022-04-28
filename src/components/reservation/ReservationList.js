@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import ReservationItems from "./ReservationItems";
 import { RESERVATIONBACKEND } from "../../_actions/types";
+import axios from "axios";
 
 const ReservationList = () => {
     const [reservations, setReservations] = useState([]);
   
     useEffect(() => {
-      fetch(`${RESERVATIONBACKEND}/reservation/getAll`)
-        .then((res) => res.json())
+      axios.get(`${RESERVATIONBACKEND}/reservation/getAll`)
+        .then((res) => res.data)
         .then((res) => {
           setReservations(res);
         });

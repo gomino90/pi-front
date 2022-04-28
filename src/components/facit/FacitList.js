@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import FacitItem from "./FacitItem";
 import { RESERVATIONBACKEND } from "../../_actions/types";
+import axios from "axios";
 
 function FacitList() {
     
   const [facits, setFacits] = useState([]);
 
   useEffect(() => {
-    fetch(`${RESERVATIONBACKEND}/tbfacit/getAll`)
-      .then((res) => res.json())
+    axios.get(`${RESERVATIONBACKEND}/tbfacit/getAll`)
+      .then((res) => res.data)
       .then((res) => {
         setFacits(res);
       });

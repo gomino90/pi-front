@@ -11,9 +11,8 @@ const ReservationListByFcSeq = () => {
   
     useEffect(() => {
       axios.get(`${RESERVATIONBACKEND}/reservation/getAll/${fcSeq}`)
-        .then((res) => res.json())
         .then((res) => {
-          setReservations(res);
+          setReservations(res.data);
         });
     }, []);
   

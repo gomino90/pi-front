@@ -62,11 +62,9 @@ const ReservationItems = (props) => {
                 <td>{stat}</td>
                     {
                         user.userId === {userId} ? (
-                            <div>
                                 <td>
                                     <Button type="button" onClick={deleteReservation} className="btn btn-primary" variant="primary">예약취소</Button>
                                 </td>
-                            </div>
                         ):(
                             <></>
                         )
@@ -74,14 +72,12 @@ const ReservationItems = (props) => {
                     {
                         user.role === "Admin" ? (
                             <>
-                            <div>
                                 <td>
                                     <Button type="button" onClick={approvalReservation} className="btn btn-primary" variant="primary">예약승인</Button>
                                 </td>
                                 <td>
                                     <Button type="button" onClick={noapprovalReservation} className="btn btn-primary" variant="primary">예약거절</Button>
                                 </td>
-                            </div>
                             </>
                         ):(
                             <>
